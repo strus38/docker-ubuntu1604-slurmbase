@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV SLURM_VER=20.02.2
+ENV SLURM_VER=18.08.5
 
 # Create users, set up SSH keys (for MPI)
 RUN useradd -u 2001 -d /home/slurm slurm
