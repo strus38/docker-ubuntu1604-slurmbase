@@ -11,7 +11,7 @@ ADD etc/sudoers.d/ddhpc /etc/sudoers.d/ddhpc
 # ADD home/ddhpc/ssh/id_rsa.pub /home/ddhpc/.ssh/id_rsa.pub
 # ADD home/ddhpc/ssh/authorized_keys /home/ddhpc/.ssh/authorized_keys
 # RUN chown -R ddhpc:ddhpc /home/ddhpc/.ssh/
-RUN chmod 400 /home/ddhpc/.ssh/*
+#RUN chmod 400 /home/ddhpc/.ssh/*
 
 # Install packages
 RUN apt-get update && apt-get -y  dist-upgrade
