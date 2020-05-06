@@ -6,11 +6,11 @@ ENV SLURM_VER=20.02.2
 RUN useradd -u 2001 -d /home/slurm slurm
 RUN useradd -u 6000 -ms /bin/bash ddhpc
 ADD etc/sudoers.d/ddhpc /etc/sudoers.d/ddhpc
-ADD home/ddhpc/ssh/config /home/ddhpc/.ssh/config
-ADD home/ddhpc/ssh/id_rsa /home/ddhpc/.ssh/id_rsa
-ADD home/ddhpc/ssh/id_rsa.pub /home/ddhpc/.ssh/id_rsa.pub
-ADD home/ddhpc/ssh/authorized_keys /home/ddhpc/.ssh/authorized_keys
-RUN chown -R ddhpc:ddhpc /home/ddhpc/.ssh/
+# ADD home/ddhpc/ssh/config /home/ddhpc/.ssh/config
+# ADD home/ddhpc/ssh/id_rsa /home/ddhpc/.ssh/id_rsa
+# ADD home/ddhpc/ssh/id_rsa.pub /home/ddhpc/.ssh/id_rsa.pub
+# ADD home/ddhpc/ssh/authorized_keys /home/ddhpc/.ssh/authorized_keys
+# RUN chown -R ddhpc:ddhpc /home/ddhpc/.ssh/
 RUN chmod 400 /home/ddhpc/.ssh/*
 
 # Install packages
