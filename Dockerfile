@@ -26,8 +26,7 @@ RUN apt-get install -y munge curl gcc make bzip2 supervisor python python-dev \
 RUN curl -fsL https://download.schedmd.com/slurm/slurm-${SLURM_VER}.tar.bz2 | tar xfj - -C /opt/ && \
     cd /opt/slurm-${SLURM_VER}/ && \
     ./configure && make && make install
-RUN mkdir -p /usr/local/etc/slurm
-ADD etc/slurm/slurm.conf /usr/local/etc/slurm/slurm.conf
+ADD etc/slurm/slurm.conf /usr/local/etc/slurm.conf
 
 
 # Configure OpenSSH
